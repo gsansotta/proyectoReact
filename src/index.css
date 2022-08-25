@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header{  
+  padding: 25px;
+  list-style: none;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center; 
+  background-color: #161c2d;
+  color: aliceblue;
+}
+
+.navBar{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  margin-top: 1rem;
+  
+}
+
+.navBar li{
+  margin-left: 1rem;
+  margin-right: 1rem;  
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.navBar a{
+  text-decoration: none;
+}
+
+#pelota-logo{
+  max-width: 40px;
+  margin-left: 3rem;
+  
+}
+
+.greeting{  
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
