@@ -7,9 +7,9 @@ function App() {
   return (
     <div className='container'>
       <header className="header">
-        <ItemListContainer greeting={'FutStar- Tu tienda de estrellas'}/>   
         <NavBar/>
       </header>
+        <ItemListContainer greeting={'FutStar- Tu tienda de estrellas'}/>   
     </div>
   );
 }
