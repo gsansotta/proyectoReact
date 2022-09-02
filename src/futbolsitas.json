@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "imagen": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Emiliano_Mart%C3%ADnez_en_2022%2C_con_la_Finalissima.jpg",
+        "imagen": "https://www.footballdatabase.eu/images/photos/players/a_150/150335.jpg",
         "nombre": "Emiliano Martinez",
         "edad": 29,
         "posicion": "arquero",
@@ -10,7 +10,7 @@
     },
     {
         "id": "2",
-        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Ter_Stegen_2019_03_17_2.jpg/800px-Ter_Stegen_2019_03_17_2.jpg",
+        "imagen": "https://www.footballdatabase.eu/images/photos/players/a_118/118550.jpg",
         "nombre": "Marc-André ter Stegen",
         "edad": 30,
         "posicion": "arquero",
@@ -19,7 +19,7 @@
     },
     {
         "id": "3",
-        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/20160604_AUT_NED_8876_%28cropped%29.jpg/800px-20160604_AUT_NED_8876_%28cropped%29.jpg",
+        "imagen": "https://www.footballdatabase.eu/images/photos/players/a_137/137796.jpg",
         "nombre": "Virgil van Dijk",
         "edad": 31,
         "posicion": "defensor",
@@ -28,7 +28,7 @@
     },
     {
         "id": "4",
-        "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/17/Presnel_Kimpembe_%28cropped%29.jpg",
+        "imagen": "https://www.footballdatabase.eu/images/photos/players/a_218/218649.jpg",
         "nombre": "Presnel Kimpembe",
         "edad": 27,
         "posicion": "defensor",
@@ -37,7 +37,7 @@
     },
     {
         "id": "5",
-        "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/36/Kevin_De_Bruyne.jpg",
+        "imagen": "https://www.footballdatabase.eu/images/photos/players/a_69/69338.jpg",
         "nombre": "Kevin De Bruyne",
         "edad": 31,
         "posicion": "mediocampista",
@@ -46,6 +46,7 @@
     },
     {
         "id": "6",
+        "imagen": "https://www.footballdatabase.eu/images/photos/players/a_262/262909.jpg",
         "nombre": "Frenkie de Jong",
         "edad": 25,
         "posicion": "mediocampista",
@@ -54,7 +55,7 @@
     },
     {
         "id": "7",
-        "imagen": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Lionel_Messi_20180626.jpg",
+        "imagen": "https://www.footballdatabase.eu/images/photos/players/a_10/10973.jpg",
         "nombre": "Lionel Andrés Messi",
         "edad": 35,
         "posicion": "delantero",
@@ -63,7 +64,7 @@
     },
     {
         "id": "8",
-        "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93129_%28cropped%29.jpg/800px-2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93129_%28cropped%29.jpg",
+        "imagen": "https://www.footballdatabase.eu/images/photos/players/a_250/250043.jpg",
         "nombre": "Kylian Mbappé",
         "edad": 23,
         "posicion": "delantero",
