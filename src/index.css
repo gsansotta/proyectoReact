@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
 code {
@@ -55,8 +56,28 @@ code {
   
 }
 
+#btnCarga{
+  margin-top: 15%;
+}
+
 .greeting{  
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+}
+
+.card{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(19, 5, 32, 0.979);
+}
+
+#counter{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-size: 20px;
+
 }
