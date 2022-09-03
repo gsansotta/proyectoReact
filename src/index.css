@@ -26,6 +26,9 @@ code {
   color: aliceblue;
   width: 100%;
 }
+.root{
+  width: 100%;
+}
 
 .navBar{
   display: flex;

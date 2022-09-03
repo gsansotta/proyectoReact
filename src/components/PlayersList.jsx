@@ -3,10 +3,8 @@ import Players from "./Players"
 
 const playersList = ({ players }) => {
     return (
-        <div>
-
-            {players.length ? players.map( (player) => <Players key={player.id} {...player}  /> ): <h2>Cargando futbolistas...</h2> }
-
+        <div className="flex flex-wrap justify-center">
+            {players.length ? players.map((player) => <Players key={player.id} {...player} />) : <h2>Cargando futbolistas...</h2>}
         </div>
     )
 }
