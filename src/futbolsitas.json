@@ -6,7 +6,8 @@
         "edad": 29,
         "posicion": "arquero",
         "nacionalidad": "argentina",
-        "precio": 3000000
+        "precio": 3000000,
+        "equiposQueJugo":["LIVERPOOL", "MANCHESTER","CHELSEA"]
     },
     {
         "id": "2",
@@ -15,7 +16,8 @@
         "edad": 30,
         "posicion": "arquero",
         "nacionalidad": "alemana",
-        "precio": 4000000
+        "precio": 4000000,
+        "equiposQueJugo":["LIVERPOOL", "MANCHESTER","CHELSEA"]
     },
     {
         "id": "3",
@@ -24,7 +26,8 @@
         "edad": 31,
         "posicion": "defensor",
         "nacionalidad": "holandesa",
-        "precio": 6000000
+        "precio": 6000000,
+        "equiposQueJugo":["LIVERPOOL", "MANCHESTER","CHELSEA"]
     },
     {
         "id": "4",
@@ -33,7 +36,8 @@
         "edad": 27,
         "posicion": "defensor",
         "nacionalidad": "francesa",
-        "precio": 5500000
+        "precio": 5500000,
+        "equiposQueJugo":["LIVERPOOL", "MANCHESTER","CHELSEA"]
     },
     {
         "id": "5",
@@ -42,7 +46,8 @@
         "edad": 31,
         "posicion": "mediocampista",
         "nacionalidad": "belga",
-        "precio": 7000000
+        "precio": 7000000,
+        "equiposQueJugo":["CHELSEA"]
     },
     {
         "id": "6",
@@ -51,7 +56,8 @@
         "edad": 25,
         "posicion": "mediocampista",
         "nacionalidad": "holandesa",
-        "precio": 8500000
+        "precio": 8500000,
+        "equiposQueJugo":["LIVERPOOL"]
     },
     {
         "id": "7",
@@ -60,7 +66,8 @@
         "edad": 35,
         "posicion": "delantero",
         "nacionalidad": "argentina",
-        "precio": 10000000
+        "precio": 10000000,
+        "equiposQueJugo":["LIVERPOOL", "MANCHESTER","CHELSEA"]
     },
     {
         "id": "8",
@@ -69,6 +76,7 @@
         "edad": 23,
         "posicion": "delantero",
         "nacionalidad": "francesa",
-        "precio": 8000000
+        "precio": 8000000,
+        "equiposQueJugo":["LIVERPOOL", "MANCHESTER","CHELSEA"]
     }
 ]

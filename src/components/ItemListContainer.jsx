@@ -23,8 +23,8 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <>
-    <div className="greeting">{greeting}</div>
-   {<PlayersList players={futbolistas}/>}
+      <div className="greeting">{greeting}</div>
+      {<PlayersList players={futbolistas} />}
     </>
   );
 }
