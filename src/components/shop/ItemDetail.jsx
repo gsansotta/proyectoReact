@@ -17,7 +17,7 @@ const ItemDetail = () => {
   }, [])
 
   const onAdd = (quantity) => {
-    debugger;
+    
     setCounter(quantity);
     addItem(player, quantity)
   }

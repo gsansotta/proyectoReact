@@ -4,7 +4,7 @@ export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([])
 
     function addItem(item, quantity) {
-        debugger;
+        
         console.log(item.id, quantity);
 
         if (isInCart(item.id)) {
@@ -30,8 +30,18 @@ export const CartProvider = ({ children }) => {
         return items.some((element) => element.id === itemId)
     }
 
+    const getPlayersId = () =>{
+        let ids = [];
+        for (const iterator of items) {
+            ids.push(iterator.id)
+        }
+        return ids;
+    }
+
+
+
     return (
-        <CartContext.Provider value={{ addItem,isInCart,removeItem }}>
+        <CartContext.Provider value={{ getPlayersId, addItem,isInCart,removeItem }}>
             {children}
         </CartContext.Provider>
 

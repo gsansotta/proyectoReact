@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/shop/ItemDetailContainer';
 import Footer from './components/Footer';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/cart/Cart';
+import ProductsContainer from './components/firebase/ProductsContainer';
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
             <Route path='/' element={<ItemListContainer greeting={'FutStar- Tu tienda de estrellas'} />} />
             <Route path='/shop/:playerId' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
+            <Route path='/products' element={<ProductsContainer/>} />
           </Routes>
           <Footer />
-        </BrowserRouter>
+        </BrowserRouter> 
       </CartProvider>
     </>
   );

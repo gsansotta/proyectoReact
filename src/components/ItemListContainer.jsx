@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import futbolistasJson from "../futbolsitas.json"
 import PlayersList from "./PlayersList"
 
+
 const ItemListContainer = ({ greeting }) => {
   const [futbolistas, setFutbolistas] = useState([]);
   const getFutbolistas = (data, time) => new Promise((resolve, reject) => {
@@ -20,6 +21,7 @@ const ItemListContainer = ({ greeting }) => {
         setFutbolistas(res)
       }).catch((err) => console.log(err, ": no hay futbolistas"))
   }, [])
+
 
   return (
     <>
