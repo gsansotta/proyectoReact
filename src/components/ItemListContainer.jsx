@@ -1,25 +1,22 @@
 import { useEffect, useState } from "react"
 import futbolistasJson from "../futbolsitas.json"
 import PlayersList from "./PlayersList"
+import {getPlayers} from "./firebase/ProductsContainer"
 
 
 const ItemListContainer = ({ greeting }) => {
   const [futbolistas, setFutbolistas] = useState([]);
-  const getFutbolistas = (data, time) => new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (data) {
-        resolve(data)
-      } else {
-        reject('Error')
-      }
-    }, time)
-  });
 
+  
+ 
   useEffect(() => {
-    getFutbolistas(futbolistasJson, 3000)
-      .then((res) => {
-        setFutbolistas(res)
-      }).catch((err) => console.log(err, ": no hay futbolistas"))
+    let prueba = getPlayers().then((actuales)=> {
+      setFutbolistas(actuales )
+    })
+      
+      
+   
+    console.log( futbolistas);
   }, [])
 
 
