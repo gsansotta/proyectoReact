@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { collection, getDocs, getFirestore,doc,getDoc } from "firebase/firestore";
+import { collection, getDocs, getFirestore,doc,getDoc, query, where, documentId } from "firebase/firestore";
 
 
 export const ProductCard = ({ title, price, img }) => {
@@ -14,11 +14,23 @@ export const ProductCard = ({ title, price, img }) => {
 }
 
 export const getPlayer = (playerId) => {
+  let products;
   const db = getFirestore()
-  const player = doc(db, 'items', playerId)
-  return getDoc(player).then(res => {
-    const data = res.data()
-    return data
+  const productQuery =  query(collection(db, "items"),where(documentId(),"==",playerId));
+  return getDocs(productQuery).then((snapshot)=>{
+      products = snapshot.docs.map(d => ({ id: d.id, ...d.data()}));
+      return [...products]
+  })
+}
+
+
+export const getPlayerByposicion = (posicion) => {
+  let products;
+  const db = getFirestore()
+  const productQuery =  query(collection(db, "items"),where("posicion","==",posicion));
+  return getDocs(productQuery).then((snapshot)=>{
+      products = snapshot.docs.map(d => ({ id: d.id, ...d.data()}));
+      return products
   })
 }
 

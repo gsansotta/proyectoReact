@@ -11,7 +11,8 @@ const ItemDetail = () => {
   const [counter, setCounter] = useState(1)
   useEffect(() => {
     getPlayer(playerId).then(player => {
-      setPlayer(player)      
+      console.log("adentro de itemdetail elplayer es:",player );
+      setPlayer(...player)      
     })
   }, [])
 
@@ -30,10 +31,10 @@ const ItemDetail = () => {
   return (    
     <>
         <div className="card lg:card-side bg-base-100 shadow-xl">
-        <figure><img src={player.img} alt="Album" /></figure>
+         <figure><img src={player.img} alt="Album" /></figure> 
         <div className="card-body">
           <h2 className="card-title">{player.title}</h2>
-          <p>$</p>
+          <p>Precio $ {player.price}</p>
           <div class="justify-center">
             <h2 className="card-title">AÑOS DE CONTRATO</h2>
             {isInCart(player.id) ?buttonToCart:<ItemCount onAdd={onAdd}/>  }

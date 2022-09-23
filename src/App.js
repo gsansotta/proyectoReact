@@ -18,9 +18,9 @@ function App() {
 
           <Routes>
             <Route path='/' element={<ItemListContainer greeting={'FutStar- Tu tienda de estrellas'} />} />
+            <Route path='/categorys/:category' element={<ItemListContainer greeting={'FutStar- Tu tienda de estrellas'} />} />
             <Route path='/shop/:playerId' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
-           {/*  <Route path='/products' element={<ProductsContainer/>} /> */}
           </Routes>
           <Footer />
         </BrowserRouter> 

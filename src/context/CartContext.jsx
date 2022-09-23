@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { getPlayers } from "../components/firebase/ProductsContainer";
 export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([])
@@ -38,10 +39,21 @@ export const CartProvider = ({ children }) => {
         return ids;
     }
 
+    const getPlayers = () => {
+        return items;
+    }
+
+    const getQuantity = () => {
+        let quantity = 0;
+        items.forEach(actual => {
+            quantity += actual.quantity
+        })
+        return quantity;
+    }
 
 
     return (
-        <CartContext.Provider value={{ getPlayersId, addItem,isInCart,removeItem }}>
+        <CartContext.Provider value={{ getPlayersId, addItem,isInCart,removeItem,getPlayers,items, clear, getQuantity }}>
             {children}
         </CartContext.Provider>
 

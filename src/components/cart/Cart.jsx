@@ -1,47 +1,41 @@
 import { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../context/CartContext"
-import futbolistasJson from "../../futbolsitas.json"
-import PlayersList from "../PlayersList"
+import CartDetail from "./CartDetail"
+
 
 
 const Cart = () => {
 
-  const { getPlayersId } = useContext(CartContext)
-
+  const { getPlayers, items, clear} = useContext(CartContext)
 
 
   const [futbolistas, setFutbolistas] = useState([]);
-  const getFutbolistas = (data, time) => new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (data) {
-        resolve(data)
-      } else {
-        reject('Error')
-      }
-    }, time)
-  });
 
   useEffect(() => {
-    getFutbolistas(futbolistasJson)
-      .then((res) => {
-        let ids = getPlayersId()
-        let playersActuales = []
-        for (const iterator of res) {
-          for (let index = 0; index < ids.length; index++) {
-            if (iterator.id == ids[index]) {
-              playersActuales.push(iterator);
-            }
-          }
-        }
-        setFutbolistas(playersActuales)
-        console.log(playersActuales);
-      }).catch((err) => console.log(err, ": no hay futbolistas"))
-  }, [])
+    console.log(getPlayers())
+    setFutbolistas(getPlayers())
 
+  }, [items])
 
 
   return (
-    <div>Cart</div>
+    <>
+    <div>
+       {futbolistas.length ? (
+                    futbolistas.map((item) => <CartDetail carrito={item} {...item} />)
+                  ) : (
+                    <h2>No hay productos en el carrito...</h2>
+                  )}
+    </div>
+
+      {futbolistas.length ? 
+        <div> <button className="btn" onClick={clear}> VACIAR CARRITO </button>
+
+        </div> :
+        ''
+      } 
+         </>
+
   )
 }
 export default Cart
