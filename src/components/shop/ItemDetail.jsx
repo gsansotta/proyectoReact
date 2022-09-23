@@ -26,6 +26,7 @@ const ItemDetail = () => {
   }
   const buttonToCart = <Link to='/cart'><button className="btn btn-primary"> Ir al carrito </button></Link>
   const buttonDeletePlayer = <button className="btn btn-primary" onClick={onDelete}> Eliminar jugador</button>
+  const buttonContinue = <Link to='/'><button className="btn btn-primary"> Continuar comprando </button></Link>
   
 
   return (    
@@ -39,6 +40,7 @@ const ItemDetail = () => {
             <h2 className="card-title">AÑOS DE CONTRATO</h2>
             {isInCart(player.id) ?buttonToCart:<ItemCount onAdd={onAdd}/>  }
             {isInCart(player.id) ?buttonDeletePlayer: ''  }
+            {isInCart(player.id) ?buttonContinue: ''  }
           </div>         
         </div>
       </div>

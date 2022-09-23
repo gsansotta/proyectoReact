@@ -8,6 +8,7 @@ const CartWidget = () => {
     const {getQuantity} = useContext(CartContext)
     return (            
         <>
+        <div className="cartWidget">
         {logoPortada}   
       <li className="font-sans block mt-4 lg:inline-block lg:mt-0 lg:ml-6 align-middle text-white hover:text-gray-700">
         <a href="#" role="button" className="relative flex">
@@ -18,6 +19,7 @@ const CartWidget = () => {
           </span>
         </a>
       </li>
+      </div>
     </>           
     )
 

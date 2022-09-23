@@ -1,13 +1,10 @@
 import React, { createContext, useState } from "react";
-import { getPlayers } from "../components/firebase/ProductsContainer";
 export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [items, setItems] = useState([])
 
-    function addItem(item, quantity) {
-        
-        console.log(item.id, quantity);
-
+    function addItem(item, quantity) {      
+      
         if (isInCart(item.id)) {
             let aux = item;
             let itemIndex = aux.indexOf((element) => element.id === item.id)
@@ -19,12 +16,10 @@ export const CartProvider = ({ children }) => {
 
     function removeItem(itemId) {
         setItems(items.filter(actual => actual.id !== itemId))
-
     }
 
     function clear() {
         setItems([])
-
     }
 
     function isInCart(itemId) {
@@ -51,9 +46,17 @@ export const CartProvider = ({ children }) => {
         return quantity;
     }
 
+    const totalCart = () => {
+        let total = 0;
+        items.forEach(actual => {          
+            actual.quantity>1 ? total += (actual.quantity*actual.price) : total += actual.price 
+        })
+        return total;
+    }
+
 
     return (
-        <CartContext.Provider value={{ getPlayersId, addItem,isInCart,removeItem,getPlayers,items, clear, getQuantity }}>
+        <CartContext.Provider value={{ getPlayersId, addItem,isInCart,removeItem,getPlayers,items, clear, getQuantity, totalCart }}>
             {children}
         </CartContext.Provider>
 

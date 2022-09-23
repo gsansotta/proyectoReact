@@ -10,7 +10,7 @@ const NavBar = () => {
         <a href="http://"><li>Productos</li></a>
         <a href="http://"> <li>Contacto</li></a>
         <a href="http://"><li>About</li></a>
-        <Link to="/cart"> <CartWidget/> </Link>
+        <Link to="/cart"> <CartWidget/></Link>
       </nav>
     </header>
   )
