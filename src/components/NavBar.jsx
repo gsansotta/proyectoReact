@@ -8,8 +8,9 @@ const NavBar = () => {
           <li>Inicio</li>
         </Link>
         <Link to={`/posicion/arquero`}><li>Arqueros</li></Link>
-        <a href="http://"> <li>Contacto</li></a>
-        <a href="http://"><li>About</li></a>
+        <Link to={`/posicion/defensor`}><li>Defensores</li></Link>
+        <Link to={`/posicion/mediocampista`}><li>Mediocampistas</li></Link>
+        <Link to={`/posicion/delantero`}><li>Delanteros</li></Link>      
         <Link to="/cart"> <CartWidget/></Link>
       </nav>
     </header>
