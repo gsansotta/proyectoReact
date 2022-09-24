@@ -21,7 +21,7 @@ const ItemCount = ( {onAdd} ) => {
         </button>
       </div>
         <div className="card-actions">
-          <button className="btn btn-primary" onClick={()=>onAdd(counter)}>Contratar</button>
+          <button className="btn btn-primary mt-5 ml-5" onClick={()=>onAdd(counter)}>Contratar</button>
         </div>
 
     </>

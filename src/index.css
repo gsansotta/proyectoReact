@@ -85,3 +85,9 @@ code {
   display: flex;
   flex-direction:row;
 }
+
+/* footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+} */

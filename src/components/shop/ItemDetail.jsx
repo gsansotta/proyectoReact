@@ -24,10 +24,10 @@ const ItemDetail = () => {
   const onDelete = () =>{
     removeItem(player.id)
   }
-  const buttonToCart = <Link to='/cart'><button className="btn btn-primary"> Ir al carrito </button></Link>
-  const buttonDeletePlayer = <button className="btn btn-primary" onClick={onDelete}> Eliminar jugador</button>
-  const buttonContinue = <Link to='/'><button className="btn btn-primary"> Continuar comprando </button></Link>
-  
+  const buttonToCart = <Link to='/cart'><button className="btn btn-primary mt-5 ml-5"> Ir al carrito </button></Link>
+  const buttonDeletePlayer = <button className="btn btn-primary mt-5 ml-5" onClick={onDelete}> Eliminar jugador</button>
+  const buttonContinue = <Link to='/'><button className="btn btn-primary mt-5 ml-5"> Continuar comprando </button></Link>
+
 
   return (    
     <>
@@ -35,7 +35,7 @@ const ItemDetail = () => {
          <figure><img src={player.img} alt="Album" /></figure> 
         <div className="card-body">
           <h2 className="card-title">{player.title}</h2>
-          <p>Precio $ {player.price}</p>
+          <p>Contrato anual $ {player.price}</p>
           <div class="justify-center">
             <h2 className="card-title">AÑOS DE CONTRATO</h2>
             {isInCart(player.id) ?buttonToCart:<ItemCount onAdd={onAdd}/>  }

@@ -12,7 +12,7 @@ const Cart = () => {
 
   const [futbolistas, setFutbolistas] = useState([]);
 
-  useEffect(() => {   
+  useEffect(() => {
     setFutbolistas(getPlayers())
 
   }, [items])
@@ -25,23 +25,21 @@ const Cart = () => {
           <div className="max-w-md mx-auto bg-gray-100 shadow-lg rounded-lg  md:max-w-5xl">
             <div className="md:flex ">
               <div className="w-full p-4 px-5 py-5">
-
                 <div className="md:grid md:grid-cols-2 gap-2 ">
-
                   <div className="col-span-2 p-5">
-
                     <h1 className="text-xl font-medium ">Carrito </h1>
                     <div>
                       {futbolistas.length ? (
                         futbolistas.map((item) => <CartDetail carrito={item} {...item} />)
                       ) : (
-                        <h2>No hay productos en el carrito...</h2>
+                        <h2>No hay futbolistas para contratar...</h2>
                       )}
                     </div>
                     <div className="flex justify-between items-center mt-6 pt-6 border-t">
                       <div className="flex flex-col items-center">
                         <div>
-                          <Link to="/"> <span className="text-md  font-medium text-blue-500">Continuar comprando</span></Link>
+                          <Link to="/"> <span className="text-md  font-medium text-dark-500">Continuar comprando</span></Link>
+                          {futbolistas.length ? <div> <button className="btn mt-5 ml-5" onClick={clear}> VACIAR CARRITO </button> </div> : ''}
                         </div>
                       </div>
                       <div className="flex justify-center items-end">
@@ -57,12 +55,6 @@ const Cart = () => {
         </div>
       </div>
 
-      {futbolistas.length ?
-        <div> <button className="btn" onClick={clear}> VACIAR CARRITO </button>
-
-        </div> :
-        ''
-      }
     </>
 
   )

@@ -30,7 +30,7 @@ const CartDetail = ({ title,  id, img, price, quantity }) => {
                     <span className="text-xs font-medium">Años de contrato: {quantity}</span>
                     </div>
                     <div className="pr-8 ">
-                    <span className="text-xs font-medium">$ {price*quantity}</span>
+                    <span className="text-xs font-medium">$ {price*quantity}</span>                    
                     </div>
                     <div>
                         <button onClick={onDelete}> <span className="text-xs font-bold" >X</span></button>
