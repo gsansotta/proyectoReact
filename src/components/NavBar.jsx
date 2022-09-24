@@ -7,7 +7,7 @@ const NavBar = () => {
         <Link to={'/'}>
           <li>Inicio</li>
         </Link>
-        <a href="http://"><li>Productos</li></a>
+        <Link to={`/posicion/arquero`}><li>Arqueros</li></Link>
         <a href="http://"> <li>Contacto</li></a>
         <a href="http://"><li>About</li></a>
         <Link to="/cart"> <CartWidget/></Link>
