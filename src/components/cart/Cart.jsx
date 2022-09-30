@@ -3,20 +3,13 @@ import { CartContext } from "../../context/CartContext"
 import CartDetail from "./CartDetail"
 import { Link } from "react-router-dom"
 
-
-
 const Cart = () => {
-
   const { getPlayers, items, clear, totalCart } = useContext(CartContext)
-
-
-  const [futbolistas, setFutbolistas] = useState([]);
+  const [futbolistas, setFutbolistas] = useState([]);  
 
   useEffect(() => {
     setFutbolistas(getPlayers())
-
   }, [items])
-
 
   return (
     <>
@@ -39,7 +32,8 @@ const Cart = () => {
                       <div className="flex flex-col items-center">
                         <div>
                           <Link to="/"> <span className="text-md  font-medium text-dark-500">Continuar comprando</span></Link>
-                          {futbolistas.length ? <div> <button className="btn mt-5 ml-5" onClick={clear}> VACIAR CARRITO </button> </div> : ''}
+                          {futbolistas.length ? <div> <button className="btn mt-5 ml-5" onClick={clear}> VACIAR CARRITO </button> 
+                          <Link to="/cart/checkout"><button className="btn mt-5 ml-5"> IR AL PAGO </button></Link></div> : ''}
                         </div>
                       </div>
                       <div className="flex justify-center items-end">
@@ -52,11 +46,9 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
+        </div>     
+      </div>     
     </>
-
   )
 }
 export default Cart

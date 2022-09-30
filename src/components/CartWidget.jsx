@@ -20,6 +20,7 @@ const CartWidget = () => {
         </a>
       </li>
       </div>
+      
     </>           
     )
 
