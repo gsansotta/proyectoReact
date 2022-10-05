@@ -1,17 +1,5 @@
-import { useEffect, useState } from "react"
 import { collection, getDocs, getFirestore,doc,getDoc, query, where, documentId } from "firebase/firestore";
 
-
-export const ProductCard = ({ title, price, img }) => {
-  return (
-    <>
-      <li>{title}</li>
-      <li>{price}</li>
-      <img src={img} alt="" />
-    </>
-
-  )
-}
 
 export const getPlayer = (playerId) => {
   let products;

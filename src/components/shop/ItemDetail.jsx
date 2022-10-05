@@ -4,6 +4,7 @@ import { CartContext } from "../../context/CartContext"
 import { getPlayer } from "../firebase/ProductsContainer"
 import ItemCount from "../ItemCount"
 
+
 const ItemDetail = () => {
   const [player, setPlayer] = useState({})
   const { playerId } = useParams();
@@ -17,10 +18,10 @@ const ItemDetail = () => {
   }, [])
 
   const onAdd = (quantity) => {
-
     setCounter(quantity);
-    addItem(player, quantity)
+    addItem(player, quantity)    
   }
+  
   const onDelete = () => {
     removeItem(player.id)
   }
@@ -36,6 +37,7 @@ const ItemDetail = () => {
         <div className="card-body">
           <h2 className="card-title">{player.title}</h2>
           <p>Contrato anual $ {player.price}</p>
+          <p>Contrato anual $ {player.price*counter}</p>
           <div className="rating">
             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked={true} />
             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked={true} />
