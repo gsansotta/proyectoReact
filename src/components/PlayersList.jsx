@@ -1,10 +1,6 @@
-
 import Players from "./Players"
 
-
-
-const playersList = ({ players }) => {
-   
+const playersList = ({ players }) => {  
 
     return (
         <>

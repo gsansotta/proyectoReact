@@ -36,8 +36,7 @@ const ItemDetail = () => {
         <figure><img src={player.img} alt="Album" /></figure>
         <div className="card-body">
           <h2 className="card-title">{player.title}</h2>
-          <p>Contrato anual $ {player.price}</p>
-          <p>Contrato anual $ {player.price*counter}</p>
+          <p>Contrato anual $ {player.price}</p>        
           <div className="rating">
             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked={true} />
             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" defaultChecked={true} />
